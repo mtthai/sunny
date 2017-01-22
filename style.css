@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'textile';
+    src: url('Textile.ttf');
+}
+
+#player {
+  display: none;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.row {
+  margin:0 auto;
+  width:400px;
+}
+
+#inputform {
+  margin-top: 150px;
+}
+
+#generateButton {
+  display: table;
+  margin: 0 auto;
+  top: 80px;
+  color: black;
+}
+
+#saveButton {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: black;
+  z-index: -2;
+}
+
+body{
+  background:black;
+  color:white;
+  font-family: 'textile';
+}
+
+#titleCard {
+    display:none;
+    left: 15%;
+    margin-top: -100px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 70%;
+    color:white;
+    z-index: -3;
+    border: none;
+    line-height: 1.5;
+    font-family: 'textile';
+    font-size:4em;
+}
+
+#description {
+  position: absolute;
+  top: 5px;
+  padding-left: 5px;
+}
+
+#description #header {
+  font-size: 20px;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-right: 5px;
+  color: white;
+}
+
+.input-field input[type=text]:focus + label {
+    color: yellow;
+}
+
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid yellow;
+    box-shadow: 0 1px 0 0 yellow;
+}
+   
+.input-field input[type=text].valid {
+    border-bottom: 1px solid yellow;
+    box-shadow: 0 1px 0 0 yellow;
+}
+
+@media only screen and (max-width: 400px){
+  #description {
+    display:none;
+    
+  }
+  .row {
+    width: 250px;
+  }
+}

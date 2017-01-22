@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IASIP Title Card Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <span id="description">
+      <span id="header">"It's Always Sunny In Philadelphia" Title Card Generator</span>
+    <br> Crop a YouTube Video and add a IASIP-style title card at the end!
+    <br>
+    </span>
+    <span id="titleCard">"It's Always Sunny In Philadelphia"</span>
+    <div id="player" frameborder="0" allowfullscreen></div>
+    
+    <div id="inputform" class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="vidURL" type="text" class="validate">
+            <label for="vidURL">URL to YouTube Video</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="start" type="text" class="validate">
+            <label for="start">Start</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="end" type="text" class="validate">
+            <label for="end">End</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="title" type="text" class="validate">
+            <label for="title">Title Card</label>
+          </div>
+        </div>
+      </form>
+      <a type="submit" id="generateButton" onclick="startVid()" class="waves-effect waves-light btn-large yellow">Generate</a>
+    </div>
+
+    <a id="saveButton" onclick="saveVid()" class="waves-effect waves-light btn-large yellow">Save?</a>
+    <span id="footer"><a href="https://github.com/mtthai" style="color:white" target="_blank">By Marvin Thai</a></span>
+  
+  <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+  <script src="firebase.js"></script>
+  <script src="sunny.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <script>
+    if(window.location.href.includes('?')){
+      $("body").append('<div class="progress black"><div class="indeterminate yellow"></div></div>');
+      $(".progress").siblings().hide();
+
+      $(window).load(function(){
+        playSharedVid();
+        $(".progress").remove();
+
+      });
+    }
+    
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+  </body>
+</html>
