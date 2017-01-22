@@ -103,6 +103,7 @@ function playSharedVid(){
 
 function loadAudio(){
   var titleMusic = new Audio('Its Always Sunny in Philadelphia Theme.mp3');
+  titleMusic.load();
   titleMusic.play();
 }
 
