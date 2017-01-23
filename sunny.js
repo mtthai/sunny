@@ -4,6 +4,16 @@ tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
+var titleMusic;
+if (navigator.userAgent.indexOf("Firefox") != -1) {
+  titleMusic = new Audio('Its Always Sunny in Philadelphia Theme.ogg');
+  titleMusic.preload = "auto";
+}
+else{
+  titleMusic = new Audio('Its Always Sunny in Philadelphia Theme.mp3');
+  titleMusic.preload = "auto";
+}
+
 var player;
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
@@ -23,7 +33,7 @@ function onYouTubeIframeAPIReady() {
 
 function onPlayerStateChange(event) {
   if (event.data == YT.PlayerState.ENDED) {
-    loadAudio();
+    titleMusic.play();
     player.destroy();
   }
 }
@@ -99,19 +109,6 @@ function playSharedVid(){
 
     startVidById(start, end, ytURL, titleCard);
   });
-}
-
-function loadAudio(){
-  var titleMusic;
-  if (navigator.userAgent.indexOf("Firefox") != -1) {
-    titleMusic = new Audio('Its Always Sunny in Philadelphia Theme.ogg');
-    titleMusic.preload = "auto";
-  }
-  else{
-    titleMusic = new Audio('Its Always Sunny in Philadelphia Theme.mp3');
-    titleMusic.preload = "auto";
-  }
-  titleMusic.play();
 }
 
 function convertTime(time){
