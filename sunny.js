@@ -105,11 +105,11 @@ function loadAudio(){
   var titleMusic;
   if (navigator.userAgent.indexOf("Firefox") != -1) {
     titleMusic = new Audio('Its Always Sunny in Philadelphia Theme.ogg');
-    console.log("ogg");
+    titleMusic.preload = "auto";
   }
   else{
     titleMusic = new Audio('Its Always Sunny in Philadelphia Theme.mp3');
-    console.log("mp3");
+    titleMusic.preload = "auto";
   }
   titleMusic.play();
 }
