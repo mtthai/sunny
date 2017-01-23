@@ -2,3 +2,9 @@
 "It's Always Sunny In Philadelphia" Title Card Generator 
 
 https://mtthai.github.io/sunny/
+
+Example:
+1) YT URL: https://www.youtube.com/watch?v=oW-ULxjelss
+2) Start: 1:11, End: 1:28 (Can be just seconds or HH:MM:SS)
+3) Title Card: Sweet Dee Gets Audited
+4) Generate :)
