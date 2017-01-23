@@ -11,7 +11,8 @@ Example:
 3. Title Card: Sweet Dee Gets Audited 
 4. Generate :)
 ```
-
+## Issues
+Not working on mobile due to restrictions to autoplaying youtube videos and audio
 
 
 
