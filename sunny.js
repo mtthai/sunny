@@ -102,7 +102,15 @@ function playSharedVid(){
 }
 
 function loadAudio(){
-  var titleMusic = new Audio('Its Always Sunny in Philadelphia Theme.mp3');
+  var titleMusic;
+  if (navigator.userAgent.indexOf("Firefox") != -1) {
+    titleMusic = new Audio('Its Always Sunny in Philadelphia Theme.ogg');
+    console.log("ogg");
+  }
+  else{
+    titleMusic = new Audio('Its Always Sunny in Philadelphia Theme.mp3');
+    console.log("mp3");
+  }
   titleMusic.play();
 }
 
