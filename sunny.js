@@ -11,7 +11,7 @@ function onYouTubeIframeAPIReady() {
                   'controls': 0,
                   'disablekb' : 1,
                   'iv_load_policy' : 3,
-                  'modestbranding' : 0,
+                  'modestbranding' : 1,
                   'showinfo' : 0,
                   'enablejsapi': 1
     },
@@ -23,8 +23,8 @@ function onYouTubeIframeAPIReady() {
 
 function onPlayerStateChange(event) {
   if (event.data == YT.PlayerState.ENDED) {
-    player.destroy();
     loadAudio();
+    player.destroy();
   }
 }
 
@@ -40,7 +40,7 @@ function startVid(){
              
   setUpTitleCard(title);
   setTimeout(function(){
-    $("#saveButton").toggle();
+    $("#saveButton").show();
   }, (((Number(end)-Number(start))*1000) + 5000));
 }
 
