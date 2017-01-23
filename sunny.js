@@ -23,7 +23,8 @@ function onYouTubeIframeAPIReady() {
                   'iv_load_policy' : 3,
                   'modestbranding' : 1,
                   'showinfo' : 0,
-                  'enablejsapi': 1
+                  'enablejsapi': 1,
+                  'origin': 'https://mtthai.github.io/'
     },
     events: {
       'onStateChange': onPlayerStateChange
