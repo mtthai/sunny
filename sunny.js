@@ -34,8 +34,8 @@ function onYouTubeIframeAPIReady() {
 
 function onPlayerStateChange(event) {
   if (event.data == YT.PlayerState.ENDED) {
-    titleMusic.play();
     player.destroy();
+    titleMusic.play();
   }
 }
 
